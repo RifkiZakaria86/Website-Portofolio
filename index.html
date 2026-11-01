@@ -28,6 +28,7 @@
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#certificates" class="nav-link">Certificates</a></li>
@@ -45,55 +46,115 @@
     </nav>
   </header>
 
-  <!-- ═══════════════ HERO ═══════════════ -->
-  <section id="hero">
-    <div class="hero-wrap">
+  <!-- ═══════════════ HERO & ABOUT (UNIFIED BENTO) ═══════════════ -->
+  <section id="about" class="hero-unified">
+    <div class="container">
+      <div class="bento-grid">
 
-      <div class="hero-meta">
-        <span class="status-dot"></span>
-        <span>Tersedia untuk peluang baru &nbsp;·&nbsp; Pasuruan, Jawa Timur</span>
-      </div>
+        <!-- Main Hero Card -->
+        <div class="bento-card bento-hero-main">
+          <div class="bento-card-inner">
+            <div class="hero-meta">
+              <span class="status-dot"></span>
+              <span class="mono">Tersedia untuk peluang baru &nbsp;·&nbsp; Pasuruan / Surabaya</span>
+            </div>
 
-      <h1 class="hero-title">
-        Mengubah data<br />
-        <em>menjadi keputusan</em><br />
-        yang tepat.
-      </h1>
+            <div class="hero-name-row">
+              <h1 class="hero-name">Rifki Zakaria</h1>
+              <span class="hero-role-badge mono">Data Analyst &amp; BI Developer</span>
+            </div>
 
-      <p class="hero-sub">
-        Halo — saya <strong>Rifki Zakaria</strong>, mahasiswa ITS Surabaya yang membangun 
-        dashboard, sistem data enterprise, dan website berbasis data. Saya percaya 
-        data yang baik adalah fondasi bisnis yang kuat.
-      </p>
+            <h2 class="hero-headline">
+              Mengubah data operasional<br />
+              menjadi <em>keputusan bisnis</em> yang presisi.
+            </h2>
 
-      <div class="hero-actions">
-        <a href="#projects" class="btn-pill dark">Lihat Proyek <span class="arrow">↓</span></a>
-        <a href="#contact" class="btn-link">Hubungi Saya →</a>
-      </div>
+            <p class="hero-desc">
+              Mahasiswa aktif <strong>Institut Teknologi Sepuluh Nopember (ITS)</strong> Surabaya. 
+              Berpengalaman nyata dalam merancang dan mengembangkan sistem manajemen data skala enterprise 
+              di <strong>PT. WIKA BETON</strong> (7 plant di seluruh Indonesia). Aktif dalam organisasi, 
+              finalis <strong>Duta Muda Jawa Timur 2024</strong>, dan pengurus <strong>Galeri Investasi ITS</strong>.
+            </p>
 
-      <div class="hero-socials">
-        <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
-        <a href="mailto:rifkizakaria@email.com" aria-label="Email" class="social-icon"><i class="far fa-envelope"></i></a>
-      </div>
+            <div class="hero-actions">
+              <a href="#projects" class="btn-pill dark">Lihat Proyek <span class="arrow">↓</span></a>
+              <a href="assets/CV_Rifki_Zakaria.pdf" download class="btn-pill outline">
+                Download CV <i class="fas fa-download"></i>
+              </a>
+              <a href="#contact" class="btn-link">Hubungi Saya →</a>
+            </div>
 
-    </div>
-
-    <div class="hero-photo-wrap">
-      <div class="hero-photo-frame">
-        <img src="assets/images/profile.jpeg" alt="Rifki Zakaria" class="hero-photo" />
-        <div class="photo-tag photo-tag-1">
-          <span class="mono">10+</span>
-          <span>Projects</span>
+            <div class="hero-socials">
+              <a href="mailto:rifkizakaria@email.com" class="social-icon" title="Email" aria-label="Email"><i class="far fa-envelope"></i></a>
+              <a href="#" class="social-icon" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="photo-tag photo-tag-2">
-          <i class="fas fa-chart-bar"></i>
-          <span>Data Analyst</span>
+
+        <!-- Photo Card: Single portrait -->
+        <div class="bento-card bento-hero-photo">
+          <img src="assets/images/profile.jpeg" alt="Rifki Zakaria — Data Analyst &amp; BI Developer" />
+          <div class="bento-photo-overlay">
+            <span class="mono">Rifki Zakaria</span>
+            <span>ITS Surabaya · Pasuruan</span>
+          </div>
         </div>
-      </div>
-      <div class="hero-scroll-hint">
-        <div class="scroll-line"></div>
-        <span class="mono">Scroll</span>
+
+        <!-- Location Card -->
+        <div class="bento-card bento-small bento-location">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Pasuruan</strong>
+            <span>Jawa Timur, Indonesia</span>
+          </div>
+        </div>
+
+        <!-- Education Card -->
+        <div class="bento-card bento-small bento-edu">
+          <i class="fas fa-graduation-cap"></i>
+          <div>
+            <strong>ITS Surabaya</strong>
+            <span>Institut Teknologi Sepuluh Nopember</span>
+          </div>
+        </div>
+
+        <!-- Status Card -->
+        <div class="bento-card bento-small bento-status">
+          <span class="status-dot"></span>
+          <div>
+            <strong>Open to Opportunities</strong>
+            <span>Full-time · Internship · Freelance</span>
+          </div>
+        </div>
+
+        <!-- Stats Banner Card -->
+        <div class="bento-card bento-stats">
+          <div class="stat-block">
+            <span class="stat-big mono">10<span class="stat-plus">+</span></span>
+            <div class="stat-detail">
+              <strong>Live Projects</strong>
+              <span>Enterprise Dashboards &amp; Web</span>
+            </div>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-block">
+            <span class="stat-big mono">7</span>
+            <div class="stat-detail">
+              <strong>Plant Deployed</strong>
+              <span>PT. WIKA BETON se-Indonesia</span>
+            </div>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-block">
+            <span class="stat-big mono">8</span>
+            <div class="stat-detail">
+              <strong>Credentials</strong>
+              <span>Sertifikasi &amp; Penghargaan Resmi</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -125,102 +186,11 @@
     </div>
   </div>
 
-  <!-- ═══════════════ ABOUT BENTO ═══════════════ -->
-  <section id="about">
-    <div class="container">
-      <div class="section-label">
-        <span class="mono label-num">01</span>
-        <span>Tentang Saya</span>
-      </div>
-
-      <div class="bento-grid">
-
-        <!-- Bio card: wide -->
-        <div class="bento-card bento-bio">
-          <div class="bento-card-inner">
-            <p class="bento-overline">Background</p>
-            <h2 class="bento-heading">
-              Data-driven thinker,<br /><em>problem solver</em> by passion.
-            </h2>
-            <p class="bento-text">
-              Mahasiswa aktif <strong>Institut Teknologi Sepuluh Nopember (ITS)</strong> Surabaya. 
-              Pengalaman magang di <strong>PT. WIKA BETON</strong> mengasah kemampuan saya membangun 
-              sistem data manajemen skala enterprise — dari spreadsheet terstruktur hingga dashboard 
-              berbasis web yang digunakan operasional harian di 7 kota Indonesia.
-            </p>
-            <p class="bento-text">
-              Saya aktif di organisasi kampus, finalis Duta Muda Jawa Timur 2024, 
-              dan pengurus Galeri Investasi ITS.
-            </p>
-            <a href="assets/CV_Rifki_Zakaria.pdf" download class="btn-pill dark" style="margin-top:1.5rem;display:inline-flex;">
-              Download CV <i class="fas fa-download" style="font-size:0.8rem;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Photo card -->
-        <div class="bento-card bento-photo">
-          <img src="assets/images/profile.jpeg" alt="Rifki Zakaria" />
-          <div class="bento-photo-overlay">
-            <span class="mono">Rifki Zakaria</span>
-            <span>ITS Surabaya · 2026</span>
-          </div>
-        </div>
-
-        <!-- Location card -->
-        <div class="bento-card bento-small bento-location">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <strong>Pasuruan</strong>
-            <span>Jawa Timur, Indonesia</span>
-          </div>
-        </div>
-
-        <!-- Education card -->
-        <div class="bento-card bento-small bento-edu">
-          <i class="fas fa-graduation-cap"></i>
-          <div>
-            <strong>ITS Surabaya</strong>
-            <span>Institut Teknologi Sepuluh Nopember</span>
-          </div>
-        </div>
-
-        <!-- Stats card -->
-        <div class="bento-card bento-stats">
-          <div class="stat-block">
-            <span class="stat-big">10<span class="stat-plus">+</span></span>
-            <span class="stat-lbl">Live Projects</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-block">
-            <span class="stat-big">7</span>
-            <span class="stat-lbl">Cities Deployed</span>
-          </div>
-          <div class="stat-sep"></div>
-          <div class="stat-block">
-            <span class="stat-big">8</span>
-            <span class="stat-lbl">Certificates</span>
-          </div>
-        </div>
-
-        <!-- Status card -->
-        <div class="bento-card bento-small bento-status">
-          <span class="status-dot"></span>
-          <div>
-            <strong>Open to Opportunities</strong>
-            <span>Full-time · Internship · Freelance</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ═══════════════ SKILLS ═══════════════ -->
   <section id="skills">
     <div class="container">
       <div class="section-label">
-        <span class="mono label-num">02</span>
+        <span class="mono label-num">01</span>
         <span>Tech Stack</span>
       </div>
 
@@ -283,7 +253,7 @@
   <section id="experience">
     <div class="container">
       <div class="section-label">
-        <span class="mono label-num">03</span>
+        <span class="mono label-num">02</span>
         <span>Pengalaman</span>
       </div>
 
@@ -419,7 +389,7 @@
   <section id="projects">
     <div class="container">
       <div class="section-label">
-        <span class="mono label-num">04</span>
+        <span class="mono label-num">03</span>
         <span>Proyek</span>
       </div>
 
@@ -628,7 +598,7 @@
   <section id="certificates">
     <div class="container">
       <div class="section-label">
-        <span class="mono label-num">05</span>
+        <span class="mono label-num">04</span>
         <span>Sertifikat</span>
       </div>
 
@@ -759,7 +729,7 @@
   <section id="contact">
     <div class="container">
       <div class="section-label">
-        <span class="mono label-num">06</span>
+        <span class="mono label-num">05</span>
         <span>Kontak</span>
       </div>
 

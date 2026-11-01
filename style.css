@@ -96,6 +96,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
+.btn-pill.outline {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--border-dark);
+}
+.btn-pill.outline:hover {
+  background: var(--paper-2);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
 .btn-link {
   font-size: 0.9rem;
   font-weight: 500;
@@ -234,67 +244,106 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ================================================================
-   HERO
+   HERO / ABOUT — UNIFIED BENTO SECTION
    ================================================================ */
-#hero {
-  min-height: 100vh;
-  padding-top: var(--nav-h);
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 0;
-  max-width: 1140px;
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+.hero-unified {
+  padding-top: calc(var(--nav-h) + 2.5rem);
+  padding-bottom: 4rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
 }
-.hero-wrap {
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+}
+.bento-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+.bento-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-dark);
+}
+
+/* Main Hero Intro Card (col 1–8, rows 1 & 2) */
+.bento-hero-main {
+  grid-column: 1 / 9;
+  grid-row: 1 / 3;
+}
+.bento-card-inner {
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 5rem 0;
-  padding-right: 4rem;
 }
 .hero-meta {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--ink-muted);
-  font-family: var(--font-mono);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.01em;
 }
-.hero-title {
+.hero-name-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.hero-name {
   font-family: var(--font-serif);
-  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
-  line-height: 1.08;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--ink);
-  margin-bottom: 1.5rem;
 }
-.hero-title em {
-  font-style: italic;
+.hero-role-badge {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid rgba(26,86,219,0.18);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+.hero-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  line-height: 1.25;
   color: var(--ink-2);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
 }
-.hero-sub {
-  font-size: 1rem;
+.hero-headline em {
+  font-style: italic;
+  color: var(--ink);
+}
+.hero-desc {
+  font-size: 0.95rem;
   color: var(--ink-muted);
-  line-height: 1.8;
-  max-width: 480px;
-  margin-bottom: 2.5rem;
+  line-height: 1.85;
+  margin-bottom: 1.75rem;
 }
-.hero-sub strong { color: var(--ink); font-weight: 500; }
+.hero-desc strong { color: var(--ink); font-weight: 500; }
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 3rem;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
 }
 .arrow { display: inline-block; transition: transform var(--transition); }
 .btn-pill:hover .arrow { transform: translateY(3px); }
 .hero-socials {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.65rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
 }
 .social-icon {
   width: 36px; height: 36px;
@@ -311,72 +360,105 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--paper);
 }
 
-/* Hero photo column */
-.hero-photo-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Photo Card (col 9–12, rows 1 & 2) */
+.bento-hero-photo {
+  grid-column: 9 / 13;
+  grid-row: 1 / 3;
   position: relative;
-  padding: 5rem 0;
+  min-height: 420px;
+  background: var(--paper-2);
 }
-.hero-photo-frame {
-  position: relative;
-  width: 360px;
-}
-.hero-photo {
+.bento-hero-photo img {
   width: 100%;
-  aspect-ratio: 3/4;
+  height: 100%;
   object-fit: cover;
   object-position: top center;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
 }
-.photo-tag {
+.bento-photo-overlay {
   position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--ink);
-  box-shadow: var(--shadow-sm);
-  white-space: nowrap;
-}
-.photo-tag .mono { font-size: 1rem; font-weight: 700; color: var(--accent); }
-.photo-tag-1 {
-  bottom: 30px; left: -30px;
-  animation: tagFloat 3.5s ease-in-out infinite;
-}
-.photo-tag-2 {
-  top: 40px; right: -25px;
-  animation: tagFloat 4s ease-in-out infinite 1.2s;
-}
-.photo-tag-2 i { color: var(--accent); }
-@keyframes tagFloat {
-  0%,100% { transform: translateY(0); }
-  50%      { transform: translateY(-8px); }
-}
-.hero-scroll-hint {
+  bottom: 0; left: 0; right: 0;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
-  color: var(--ink-dim);
-  font-size: 0.7rem;
-  font-family: var(--font-mono);
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  gap: 0.2rem;
+  color: rgba(255,255,255,0.9);
 }
-.scroll-line {
+.bento-photo-overlay .mono { font-size: 0.82rem; color: rgba(255,255,255,0.75); }
+.bento-photo-overlay span:last-child { font-size: 0.78rem; }
+
+/* Row 3: Small Info Cards */
+.bento-small {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+.bento-small i {
+  font-size: 1.2rem;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+.bento-small > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.bento-small strong {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.bento-small span {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+.bento-location { grid-column: 1 / 5; }
+.bento-edu      { grid-column: 5 / 9; }
+.bento-status   { grid-column: 9 / 13; }
+.bento-status .status-dot { width: 9px; height: 9px; }
+
+/* Row 4: Stats Banner Card (12 columns full width) */
+.bento-stats {
+  grid-column: 1 / 13;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.75rem 2.5rem;
+}
+.stat-block {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.stat-big {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.stat-plus { font-size: 1.5rem; }
+.stat-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.stat-detail strong {
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+.stat-detail span {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
+.stat-sep {
   width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--border-dark), transparent);
+  height: 44px;
+  background: var(--border);
+  flex-shrink: 0;
 }
 
 /* ================================================================
@@ -387,7 +469,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow: hidden;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  background: var(--paper);
+  background: var(--white);
   padding: 1rem 0;
 }
 .marquee-track {
@@ -412,166 +494,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-
-/* ================================================================
-   ABOUT — BENTO GRID
-   ================================================================ */
-#about {
-  padding: var(--section-v) 0;
-  background: var(--paper);
-  border-bottom: 1px solid var(--border);
-}
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto auto;
-  gap: 1rem;
-}
-.bento-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: box-shadow var(--transition), border-color var(--transition);
-}
-.bento-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-dark);
-}
-
-/* Bio: col 1–8, row 1 */
-.bento-bio {
-  grid-column: 1 / 9;
-  grid-row: 1;
-}
-.bento-card-inner {
-  padding: 2.25rem;
-}
-.bento-overline {
-  font-size: 0.72rem;
-  font-family: var(--font-mono);
-  color: var(--ink-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-}
-.bento-heading {
-  font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
-  line-height: 1.2;
-  color: var(--ink);
-  margin-bottom: 1.25rem;
-  letter-spacing: -0.02em;
-}
-.bento-heading em { font-style: italic; }
-.bento-text {
-  font-size: 0.93rem;
-  color: var(--ink-muted);
-  line-height: 1.85;
-  margin-bottom: 0.75rem;
-}
-.bento-text strong { color: var(--ink); font-weight: 500; }
-
-/* Photo: col 9–12, row 1–2 */
-.bento-photo {
-  grid-column: 9 / 13;
-  grid-row: 1 / 3;
-  position: relative;
-  min-height: 320px;
-}
-.bento-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-.bento-photo-overlay {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 1.25rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  color: rgba(255,255,255,0.9);
-}
-.bento-photo-overlay .mono { font-size: 0.8rem; color: rgba(255,255,255,0.7); }
-.bento-photo-overlay span:last-child { font-size: 0.78rem; }
-
-/* Small cards: col 1–4, row 2 */
-.bento-small {
-  grid-row: 2;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.4rem 1.6rem;
-}
-.bento-small i {
-  font-size: 1.2rem;
-  color: var(--ink-muted);
-  flex-shrink: 0;
-}
-.bento-small > div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-.bento-small strong {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--ink);
-}
-.bento-small span {
-  font-size: 0.78rem;
-  color: var(--ink-muted);
-}
-.bento-location { grid-column: 1 / 5; }
-.bento-edu { grid-column: 5 / 9; }
-
-/* Stats: col 1–8, row 3 */
-.bento-stats {
-  grid-column: 1 / 9;
-  grid-row: 3;
-  display: flex;
-  align-items: center;
-  gap: 0;
-  padding: 1.5rem 2rem;
-}
-.stat-block {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.25rem;
-}
-.stat-big {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  font-style: italic;
-  color: var(--ink);
-  line-height: 1;
-  letter-spacing: -0.03em;
-}
-.stat-plus { font-size: 1.5rem; }
-.stat-lbl {
-  font-size: 0.75rem;
-  color: var(--ink-muted);
-  font-family: var(--font-mono);
-  letter-spacing: 0.02em;
-}
-.stat-sep {
-  width: 1px;
-  height: 40px;
-  background: var(--border);
-  flex-shrink: 0;
-}
-
-/* Status: col 9–12, row 3 */
-.bento-status {
-  grid-column: 9 / 13;
-  grid-row: 3;
-}
-.bento-status .status-dot { width: 10px; height: 10px; }
 
 /* ================================================================
    SKILLS
@@ -1366,25 +1288,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    RESPONSIVE
    ================================================================ */
 @media (max-width: 1024px) {
-  #hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding-top: calc(var(--nav-h) + 2rem);
+  .hero-unified {
+    padding-top: calc(var(--nav-h) + 1.5rem);
     padding-bottom: 3rem;
   }
-  .hero-wrap { padding-right: 0; padding-top: 3rem; padding-bottom: 2rem; }
-  .hero-photo-wrap { display: flex; justify-content: center; padding: 0 0 3rem; }
-  .hero-photo-frame { width: 280px; }
-
   .bento-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .bento-bio     { grid-column: 1 / 3; grid-row: 1; }
-  .bento-photo   { grid-column: 1 / 3; grid-row: 2; min-height: 340px; }
-  .bento-location{ grid-column: 1 / 2; grid-row: 3; }
-  .bento-edu     { grid-column: 2 / 3; grid-row: 3; }
-  .bento-stats   { grid-column: 1 / 3; grid-row: 4; }
-  .bento-status  { grid-column: 1 / 3; grid-row: 5; }
+  .bento-hero-main  { grid-column: 1 / 3; grid-row: 1; }
+  .bento-hero-photo { grid-column: 1 / 3; grid-row: 2; min-height: 360px; }
+  .bento-location   { grid-column: 1 / 2; grid-row: 3; }
+  .bento-edu        { grid-column: 2 / 3; grid-row: 3; }
+  .bento-status     { grid-column: 1 / 3; grid-row: 4; }
+  .bento-stats      { grid-column: 1 / 3; grid-row: 5; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; }
+  .stat-sep         { display: none; }
 
   .skills-layout { grid-template-columns: 1fr; gap: 2rem; }
   .skills-heading { position: static; }
@@ -1434,17 +1351,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
   .exp-left { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
 
-  .bento-photo { min-height: 260px; }
+  .bento-hero-photo { min-height: 280px; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 1.25rem; }
-  .hero-photo-frame { width: 240px; }
-  .bento-grid { grid-template-columns: 1fr; }
-  .bento-bio, .bento-photo, .bento-location, .bento-edu, .bento-stats, .bento-status {
+  .bento-card-inner { padding: 1.75rem 1.25rem; }
+  .bento-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .bento-hero-main, .bento-hero-photo, .bento-location, .bento-edu, .bento-stats, .bento-status {
     grid-column: 1;
     grid-row: auto;
   }
-  .bento-stats { flex-direction: column; gap: 1rem; padding: 1.5rem; }
-  .stat-sep { width: 40px; height: 1px; }
+  .bento-stats { flex-direction: column; gap: 1.5rem; padding: 1.5rem 1.25rem; align-items: flex-start; }
+  .stat-sep { display: none; }
 }
