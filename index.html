@@ -3,830 +3,751 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rifki Zakaria | Data Analyst & Business Intelligence</title>
-  <meta name="description" content="Portfolio Rifki Zakaria - Data Analyst & Business Intelligence spesialis dashboard, spreadsheet management, dan website development berbasis data." />
-  <meta name="keywords" content="Rifki Zakaria, Data Analyst, Business Intelligence, Dashboard, Spreadsheet, ITS, Portofolio" />
+  <title>Rifki Zakaria — Data Analyst & BI Developer</title>
+  <meta name="description" content="Rifki Zakaria — Data Analyst & Business Intelligence Developer. Membangun sistem manajemen data dan dashboard berbasis web untuk enterprise. Mahasiswa ITS Surabaya." />
+  <meta name="keywords" content="Rifki Zakaria, Data Analyst, Business Intelligence, Dashboard, Google Apps Script, ITS Surabaya, Portofolio" />
   <meta name="author" content="Rifki Zakaria" />
   <link rel="icon" type="image/jpeg" href="assets/images/profile.jpeg" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Rifki Zakaria | Data Analyst & Business Intelligence" />
-  <meta property="og:description" content="Portfolio Rifki Zakaria - Data Analyst & Business Intelligence" />
-  <meta property="og:image" content="assets/images/profile.jpeg" />
-
-  <!-- Fonts -->
+  <!-- Fonts: Instrument Serif (editorial heading) + DM Sans (clean body) + JetBrains Mono (tech tags) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ====== NAVBAR ====== -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">RZ<span class="dot">.</span></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="assets/CV_Rifki_Zakaria.pdf" download class="btn-nav">Download CV</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <header id="site-header">
+    <nav class="nav-inner">
+      <a href="#" class="logo" aria-label="Home">Rifki Zakaria</a>
 
-  <!-- ====== HERO ====== -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="assets/CV_Rifki_Zakaria.pdf" download class="nav-cta">
+          Resume <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
   <section id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-blob blob-1"></div>
-    <div class="hero-blob blob-2"></div>
-    <div class="hero-container">
-      <div class="hero-text" data-aos="fade-right">
-        <div class="hero-greeting">
-          <span class="wave">👋</span> Halo, saya
-        </div>
-        <h1 class="hero-name">Rifki<br /><span class="gradient-text">Zakaria</span></h1>
-        <div class="hero-typewriter">
-          <span id="typewriter"></span><span class="cursor">|</span>
-        </div>
-        <p class="hero-desc">
-          Mahasiswa aktif ITS Surabaya yang bersemangat di bidang 
-          <strong>Data Analytics</strong>, <strong>Business Intelligence</strong>, 
-          dan <strong>Web-based Dashboard</strong>. Memiliki pengalaman nyata 
-          membangun sistem manajemen data skala enterprise.
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn-primary">Lihat Proyek <i class="fas fa-arrow-right"></i></a>
-          <a href="#contact" class="btn-secondary">Hubungi Saya</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-num">6</span>
-            <span class="stat-label">Certificates</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-num">2+</span>
-            <span class="stat-label">Years Exp.</span>
-          </div>
-        </div>
+    <div class="hero-wrap">
+
+      <div class="hero-meta">
+        <span class="status-dot"></span>
+        <span>Tersedia untuk peluang baru &nbsp;·&nbsp; Pasuruan, Jawa Timur</span>
       </div>
-      <div class="hero-image-wrap" data-aos="fade-left">
-        <div class="profile-card">
-          <div class="profile-img-container">
-            <img src="assets/images/profile.jpeg" alt="Rifki Zakaria" class="profile-img" />
-            <div class="profile-ring ring-1"></div>
-            <div class="profile-ring ring-2"></div>
-          </div>
-          <div class="profile-badge badge-1">
-            <i class="fas fa-chart-bar"></i>
-            <span>Data Analyst</span>
-          </div>
-          <div class="profile-badge badge-2">
-            <i class="fas fa-database"></i>
-            <span>BI Developer</span>
-          </div>
-          <div class="profile-badge badge-3">
-            <i class="fas fa-code"></i>
-            <span>Web Developer</span>
-          </div>
-        </div>
+
+      <h1 class="hero-title">
+        Mengubah data<br />
+        <em>menjadi keputusan</em><br />
+        yang tepat.
+      </h1>
+
+      <p class="hero-sub">
+        Halo — saya <strong>Rifki Zakaria</strong>, mahasiswa ITS Surabaya yang membangun 
+        dashboard, sistem data enterprise, dan website berbasis data. Saya percaya 
+        data yang baik adalah fondasi bisnis yang kuat.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-pill dark">Lihat Proyek <span class="arrow">↓</span></a>
+        <a href="#contact" class="btn-link">Hubungi Saya →</a>
       </div>
+
+      <div class="hero-socials">
+        <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="mailto:rifkizakaria@email.com" aria-label="Email" class="social-icon"><i class="far fa-envelope"></i></a>
+      </div>
+
     </div>
-    <div class="scroll-indicator">
-      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-      <span>Scroll down</span>
+
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <img src="assets/images/profile.jpeg" alt="Rifki Zakaria" class="hero-photo" />
+        <div class="photo-tag photo-tag-1">
+          <span class="mono">10+</span>
+          <span>Projects</span>
+        </div>
+        <div class="photo-tag photo-tag-2">
+          <i class="fas fa-chart-bar"></i>
+          <span>Data Analyst</span>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span class="mono">Scroll</span>
+      </div>
     </div>
   </section>
 
-  <!-- ====== ABOUT ====== -->
+  <!-- ═══════════════ MARQUEE ═══════════════ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Google Apps Script</span><span class="sep">·</span>
+      <span>Business Intelligence</span><span class="sep">·</span>
+      <span>Dashboard Development</span><span class="sep">·</span>
+      <span>Data Visualization</span><span class="sep">·</span>
+      <span>Web Development</span><span class="sep">·</span>
+      <span>Spreadsheet Systems</span><span class="sep">·</span>
+      <span>Vercel Deployment</span><span class="sep">·</span>
+      <span>Google Sheets</span><span class="sep">·</span>
+      <span>React / Next.js</span><span class="sep">·</span>
+      <span>Enterprise Data</span><span class="sep">·</span>
+      <!-- duplicate for seamless loop -->
+      <span>Google Apps Script</span><span class="sep">·</span>
+      <span>Business Intelligence</span><span class="sep">·</span>
+      <span>Dashboard Development</span><span class="sep">·</span>
+      <span>Data Visualization</span><span class="sep">·</span>
+      <span>Web Development</span><span class="sep">·</span>
+      <span>Spreadsheet Systems</span><span class="sep">·</span>
+      <span>Vercel Deployment</span><span class="sep">·</span>
+      <span>Google Sheets</span><span class="sep">·</span>
+      <span>React / Next.js</span><span class="sep">·</span>
+      <span>Enterprise Data</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ABOUT BENTO ═══════════════ -->
   <section id="about">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Tentang Saya</span>
-        <h2>Siapa <span class="gradient-text">Saya?</span></h2>
+      <div class="section-label">
+        <span class="mono label-num">01</span>
+        <span>Tentang Saya</span>
       </div>
-      <div class="about-grid">
-        <div class="about-image-col" data-aos="fade-right">
-          <div class="about-img-wrap">
-            <img src="assets/images/profile.jpeg" alt="Rifki Zakaria" />
-            <div class="about-img-card">
-              <i class="fas fa-university"></i>
-              <div>
-                <strong>Institut Teknologi Sepuluh Nopember</strong>
-                <span>Surabaya, Jawa Timur</span>
-              </div>
-            </div>
+
+      <div class="bento-grid">
+
+        <!-- Bio card: wide -->
+        <div class="bento-card bento-bio">
+          <div class="bento-card-inner">
+            <p class="bento-overline">Background</p>
+            <h2 class="bento-heading">
+              Data-driven thinker,<br /><em>problem solver</em> by passion.
+            </h2>
+            <p class="bento-text">
+              Mahasiswa aktif <strong>Institut Teknologi Sepuluh Nopember (ITS)</strong> Surabaya. 
+              Pengalaman magang di <strong>PT. WIKA BETON</strong> mengasah kemampuan saya membangun 
+              sistem data manajemen skala enterprise — dari spreadsheet terstruktur hingga dashboard 
+              berbasis web yang digunakan operasional harian di 7 kota Indonesia.
+            </p>
+            <p class="bento-text">
+              Saya aktif di organisasi kampus, finalis Duta Muda Jawa Timur 2024, 
+              dan pengurus Galeri Investasi ITS.
+            </p>
+            <a href="assets/CV_Rifki_Zakaria.pdf" download class="btn-pill dark" style="margin-top:1.5rem;display:inline-flex;">
+              Download CV <i class="fas fa-download" style="font-size:0.8rem;"></i>
+            </a>
           </div>
         </div>
-        <div class="about-content" data-aos="fade-left">
-          <h3>Data-driven thinker, <br/><span class="gradient-text">problem solver</span> by passion.</h3>
-          <p>
-            Saya adalah mahasiswa aktif di <strong>Institut Teknologi Sepuluh Nopember (ITS)</strong> Surabaya 
-            yang memiliki ketertarikan mendalam pada dunia data, bisnis, dan teknologi. 
-            Pengalaman magang saya di <strong>PT. WIKA BETON</strong> telah mengasah kemampuan 
-            saya dalam membangun sistem manajemen data nyata yang digunakan secara operasional.
-          </p>
-          <p>
-            Saya percaya bahwa data yang terstruktur dan divisualisasikan dengan baik adalah 
-            fondasi pengambilan keputusan bisnis yang cerdas. Saya aktif berkontribusi 
-            dalam organisasi kampus dan kegiatan kepemudaan, termasuk sebagai Finalis 
-            <strong>Duta Muda Jawa Timur 2024</strong>.
-          </p>
-          <div class="about-info-grid">
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <span>Lokasi</span>
-                <strong>Pasuruan, Jawa Timur</strong>
-              </div>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-graduation-cap"></i>
-              <div>
-                <span>Institusi</span>
-                <strong>ITS Surabaya</strong>
-              </div>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <span>Email</span>
-                <strong>rifkizakaria@example.com</strong>
-              </div>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-briefcase"></i>
-              <div>
-                <span>Status</span>
-                <strong>Open to Opportunities</strong>
-              </div>
-            </div>
+
+        <!-- Photo card -->
+        <div class="bento-card bento-photo">
+          <img src="assets/images/profile.jpeg" alt="Rifki Zakaria" />
+          <div class="bento-photo-overlay">
+            <span class="mono">Rifki Zakaria</span>
+            <span>ITS Surabaya · 2026</span>
           </div>
-          <a href="assets/CV_Rifki_Zakaria.pdf" download class="btn-primary" style="display:inline-flex; margin-top:1.5rem;">
-            <i class="fas fa-download"></i> &nbsp; Download CV
-          </a>
         </div>
+
+        <!-- Location card -->
+        <div class="bento-card bento-small bento-location">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Pasuruan</strong>
+            <span>Jawa Timur, Indonesia</span>
+          </div>
+        </div>
+
+        <!-- Education card -->
+        <div class="bento-card bento-small bento-edu">
+          <i class="fas fa-graduation-cap"></i>
+          <div>
+            <strong>ITS Surabaya</strong>
+            <span>Institut Teknologi Sepuluh Nopember</span>
+          </div>
+        </div>
+
+        <!-- Stats card -->
+        <div class="bento-card bento-stats">
+          <div class="stat-block">
+            <span class="stat-big">10<span class="stat-plus">+</span></span>
+            <span class="stat-lbl">Live Projects</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-block">
+            <span class="stat-big">7</span>
+            <span class="stat-lbl">Cities Deployed</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat-block">
+            <span class="stat-big">8</span>
+            <span class="stat-lbl">Certificates</span>
+          </div>
+        </div>
+
+        <!-- Status card -->
+        <div class="bento-card bento-small bento-status">
+          <span class="status-dot"></span>
+          <div>
+            <strong>Open to Opportunities</strong>
+            <span>Full-time · Internship · Freelance</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ====== SKILLS ====== -->
+  <!-- ═══════════════ SKILLS ═══════════════ -->
   <section id="skills">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Keahlian</span>
-        <h2>Tech <span class="gradient-text">Stack & Skills</span></h2>
+      <div class="section-label">
+        <span class="mono label-num">02</span>
+        <span>Tech Stack</span>
       </div>
-      <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
-        
-        <div class="skill-category">
-          <div class="skill-cat-header">
-            <i class="fas fa-chart-line"></i>
-            <h4>Data & Analytics</h4>
+
+      <div class="skills-layout">
+        <h2 class="skills-heading">Keahlian & <em>Tools</em></h2>
+
+        <div class="skills-cols">
+          <div class="skill-col">
+            <h4 class="skill-col-title">Data & Analytics</h4>
+            <ul class="skill-list">
+              <li><span class="mono skill-dot">→</span> Google Apps Script</li>
+              <li><span class="mono skill-dot">→</span> Google Sheets / Excel</li>
+              <li><span class="mono skill-dot">→</span> Data Visualization</li>
+              <li><span class="mono skill-dot">→</span> Business Intelligence</li>
+              <li><span class="mono skill-dot">→</span> Dashboard Design</li>
+            </ul>
           </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Google Sheets</span>
-            <span class="skill-tag">Google Apps Script</span>
-            <span class="skill-tag">Data Visualization</span>
-            <span class="skill-tag">Dashboard Design</span>
-            <span class="skill-tag">Data Analysis</span>
-            <span class="skill-tag">Business Intelligence</span>
+          <div class="skill-col">
+            <h4 class="skill-col-title">Web Development</h4>
+            <ul class="skill-list">
+              <li><span class="mono skill-dot">→</span> HTML / CSS / JavaScript</li>
+              <li><span class="mono skill-dot">→</span> React.js / Next.js</li>
+              <li><span class="mono skill-dot">→</span> Vercel Deployment</li>
+              <li><span class="mono skill-dot">→</span> Responsive Design</li>
+              <li><span class="mono skill-dot">→</span> REST API Integration</li>
+            </ul>
+          </div>
+          <div class="skill-col">
+            <h4 class="skill-col-title">Tools & Platform</h4>
+            <ul class="skill-list">
+              <li><span class="mono skill-dot">→</span> Google Workspace</li>
+              <li><span class="mono skill-dot">→</span> Git & GitHub</li>
+              <li><span class="mono skill-dot">→</span> Figma / Canva</li>
+              <li><span class="mono skill-dot">→</span> Microsoft Office Suite</li>
+              <li><span class="mono skill-dot">→</span> Project Management</li>
+            </ul>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="skill-cat-header">
-            <i class="fas fa-code"></i>
-            <h4>Web Development</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML/CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React.js</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">Vercel</span>
-            <span class="skill-tag">Responsive Design</span>
-          </div>
+        <!-- Stack pills row -->
+        <div class="stack-pills">
+          <span class="pill">Python</span>
+          <span class="pill">SQL</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">Apps Script</span>
+          <span class="pill">React</span>
+          <span class="pill">Next.js</span>
+          <span class="pill">Google Sheets</span>
+          <span class="pill">Vercel</span>
+          <span class="pill">Excel</span>
+          <span class="pill">Figma</span>
+          <span class="pill">Git</span>
+          <span class="pill">HTML/CSS</span>
         </div>
-
-        <div class="skill-category">
-          <div class="skill-cat-header">
-            <i class="fas fa-tools"></i>
-            <h4>Tools & Platform</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Microsoft Excel</span>
-            <span class="skill-tag">Google Workspace</span>
-            <span class="skill-tag">Canva</span>
-            <span class="skill-tag">Figma</span>
-            <span class="skill-tag">Git & GitHub</span>
-            <span class="skill-tag">Microsoft Office</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <div class="skill-cat-header">
-            <i class="fas fa-brain"></i>
-            <h4>Soft Skills</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Problem Solving</span>
-            <span class="skill-tag">Team Collaboration</span>
-            <span class="skill-tag">Project Management</span>
-            <span class="skill-tag">Communication</span>
-            <span class="skill-tag">Leadership</span>
-            <span class="skill-tag">Critical Thinking</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ====== EXPERIENCE ====== -->
+  <!-- ═══════════════ EXPERIENCE ═══════════════ -->
   <section id="experience">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Pengalaman</span>
-        <h2>Perjalanan <span class="gradient-text">Karir & Organisasi</span></h2>
+      <div class="section-label">
+        <span class="mono label-num">03</span>
+        <span>Pengalaman</span>
       </div>
-      <div class="timeline" data-aos="fade-up">
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-date">2025 – 2026</span>
-              <span class="timeline-type work">Magang</span>
+      <div class="exp-layout">
+        <h2 class="exp-heading">Perjalanan <em>Karir &<br />Organisasi</em></h2>
+
+        <div class="exp-list">
+
+          <div class="exp-item" data-reveal>
+            <div class="exp-left">
+              <span class="exp-period mono">2025 – 2026</span>
+              <span class="exp-badge badge-work">Magang</span>
             </div>
-            <h4>Data Analyst & Developer</h4>
-            <h5><i class="fas fa-building"></i> PT. WIKA BETON</h5>
-            <p>
-              Mengembangkan sistem Stockyard Management berbasis Google Apps Script dan Spreadsheet 
-              untuk 7 lokasi plant (Pasuruan, Bogor, Majalengka, Lampung, Subang Karawang, Sumatera Utara, Sulawesi Selatan). 
-              Membangun website dashboard internal berbasis web menggunakan Vercel.
-            </p>
-            <div class="timeline-tags">
-              <span>Google Apps Script</span>
-              <span>Spreadsheet</span>
-              <span>Dashboard</span>
-              <span>Web Dev</span>
+            <div class="exp-right">
+              <h3 class="exp-role">Data Analyst & Web Developer</h3>
+              <p class="exp-company">PT. WIKA BETON</p>
+              <p class="exp-desc">
+                Membangun ekosistem Stockyard Management System berbasis Google Apps Script 
+                untuk 7 lokasi plant di seluruh Indonesia — dari Pasuruan hingga Sulawesi Selatan. 
+                Mengembangkan website dashboard internal yang di-deploy di Vercel untuk monitoring real-time.
+              </p>
+              <div class="exp-tags">
+                <span class="mono">Apps Script</span>
+                <span class="mono">Dashboard</span>
+                <span class="mono">Next.js</span>
+                <span class="mono">Vercel</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-date">2024</span>
-              <span class="timeline-type org">Organisasi</span>
+          <div class="exp-item" data-reveal>
+            <div class="exp-left">
+              <span class="exp-period mono">2026</span>
+              <span class="exp-badge badge-org">Organisasi</span>
             </div>
-            <h4>Finalis Duta Muda Jawa Timur</h4>
-            <h5><i class="fas fa-star"></i> Pemerintah Provinsi Jawa Timur</h5>
-            <p>
-              Terpilih sebagai Finalis Duta Muda Jawa Timur 2024, mewakili generasi muda 
-              dalam forum kepemudaan tingkat provinsi.
-            </p>
-            <div class="timeline-tags">
-              <span>Public Speaking</span>
-              <span>Leadership</span>
-              <span>Kepemudaan</span>
+            <div class="exp-right">
+              <h3 class="exp-role">Pengurus Galeri Investasi</h3>
+              <p class="exp-company">Galeri Investasi ITS</p>
+              <p class="exp-desc">
+                Pengurus resmi Galeri Investasi di lingkungan ITS, mendukung literasi keuangan 
+                dan investasi pasar modal bagi civitas akademika ITS Surabaya.
+              </p>
+              <div class="exp-tags">
+                <span class="mono">Investasi</span>
+                <span class="mono">Literasi Keuangan</span>
+                <span class="mono">Pasar Modal</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-date">2023 – Sekarang</span>
-              <span class="timeline-type org">Organisasi</span>
+          <div class="exp-item" data-reveal>
+            <div class="exp-left">
+              <span class="exp-period mono">2024</span>
+              <span class="exp-badge badge-award">Penghargaan</span>
             </div>
-            <h4>Anggota Aktif</h4>
-            <h5><i class="fas fa-users"></i> ITS Entrepreneur Club</h5>
-            <p>
-              Aktif berkontribusi dalam kegiatan kewirausahaan dan pengembangan bisnis 
-              di lingkungan kampus ITS, termasuk program Upgrade UMKM bersama IYT.
-            </p>
-            <div class="timeline-tags">
-              <span>Entrepreneurship</span>
-              <span>Business</span>
-              <span>UMKM</span>
+            <div class="exp-right">
+              <h3 class="exp-role">Finalis Duta Muda Jawa Timur</h3>
+              <p class="exp-company">Pemerintah Provinsi Jawa Timur</p>
+              <p class="exp-desc">
+                Terpilih sebagai Finalis Duta Muda Jawa Timur 2024, mewakili generasi muda 
+                dalam forum kepemudaan tingkat provinsi Jawa Timur.
+              </p>
+              <div class="exp-tags">
+                <span class="mono">Leadership</span>
+                <span class="mono">Public Speaking</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-date">2023</span>
-              <span class="timeline-type award">Penghargaan</span>
+          <div class="exp-item" data-reveal>
+            <div class="exp-left">
+              <span class="exp-period mono">2023</span>
+              <span class="exp-badge badge-award">Penghargaan</span>
             </div>
-            <h4>Juara 3 Kompetisi</h4>
-            <h5><i class="fas fa-trophy"></i> Kompetisi Tingkat Regional</h5>
-            <p>
-              Meraih Juara 3 dalam kompetisi yang diselenggarakan di lingkungan akademik, 
-              menunjukkan kemampuan analitis dan problem solving yang kuat.
-            </p>
-            <div class="timeline-tags">
-              <span>Competition</span>
-              <span>Achievement</span>
+            <div class="exp-right">
+              <h3 class="exp-role">Juara 3 – Kompetisi Regional</h3>
+              <p class="exp-company">Kompetisi Akademik</p>
+              <p class="exp-desc">
+                Meraih Juara 3 dalam kompetisi yang diselenggarakan di lingkungan akademik, 
+                menunjukkan kemampuan analitis dan problem solving yang kuat.
+              </p>
+              <div class="exp-tags">
+                <span class="mono">Achievement</span>
+                <span class="mono">Competition</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-date">2023</span>
-              <span class="timeline-type org">Kegiatan</span>
+          <div class="exp-item" data-reveal>
+            <div class="exp-left">
+              <span class="exp-period mono">2023–Now</span>
+              <span class="exp-badge badge-org">Organisasi</span>
             </div>
-            <h4>Peserta Forum Daerah</h4>
-            <h5><i class="fas fa-landmark"></i> Ini Lho ITS – Forum Daerah Kabupaten Pasuruan</h5>
-            <p>
-              Berpartisipasi aktif dalam forum pengenalan ITS kepada masyarakat daerah 
-              Kabupaten Pasuruan sebagai bagian dari kegiatan promosi dan pengabdian masyarakat.
-            </p>
-            <div class="timeline-tags">
-              <span>Community</span>
-              <span>Forum</span>
-              <span>Pasuruan</span>
+            <div class="exp-right">
+              <h3 class="exp-role">Anggota – ITS Entrepreneur Club</h3>
+              <p class="exp-company">ITS Entrepreneur Club</p>
+              <p class="exp-desc">
+                Aktif berkontribusi dalam kegiatan kewirausahaan kampus, termasuk program 
+                Upgrade UMKM bersama Indonesian Youth Today (IYT) untuk digitalisasi bisnis lokal.
+              </p>
+              <div class="exp-tags">
+                <span class="mono">Entrepreneurship</span>
+                <span class="mono">UMKM</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <span class="timeline-date">2026</span>
-              <span class="timeline-type work">Organisasi</span>
+          <div class="exp-item" data-reveal>
+            <div class="exp-left">
+              <span class="exp-period mono">2023</span>
+              <span class="exp-badge badge-org">Kegiatan</span>
             </div>
-            <h4>Pengurus Galeri Investasi</h4>
-            <h5><i class="fas fa-chart-line"></i> Galeri Investasi ITS</h5>
-            <p>
-              Berperan sebagai pengurus resmi Galeri Investasi di lingkungan ITS, 
-              mendukung literasi keuangan dan investasi bagi civitas akademika.
-            </p>
-            <div class="timeline-tags">
-              <span>Investasi</span>
-              <span>Keuangan</span>
-              <span>Literasi</span>
+            <div class="exp-right">
+              <h3 class="exp-role">Peserta Forum – Ini Lho ITS</h3>
+              <p class="exp-company">Forum Daerah Kabupaten Pasuruan</p>
+              <p class="exp-desc">
+                Berpartisipasi aktif dalam forum pengenalan ITS kepada masyarakat Kabupaten Pasuruan 
+                sebagai bagian dari kegiatan promosi dan pengabdian masyarakat ITS.
+              </p>
+              <div class="exp-tags">
+                <span class="mono">Community</span>
+                <span class="mono">Pasuruan</span>
+              </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ====== PROJECTS ====== -->
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
   <section id="projects">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Proyek</span>
-        <h2>Featured <span class="gradient-text">Projects</span></h2>
+      <div class="section-label">
+        <span class="mono label-num">04</span>
+        <span>Proyek</span>
       </div>
 
-      <!-- Project Filter -->
-      <div class="project-filter" data-aos="fade-up">
-        <button class="filter-btn active" data-filter="all">Semua</button>
-        <button class="filter-btn" data-filter="dashboard">Dashboard</button>
-        <button class="filter-btn" data-filter="website">Website</button>
-        <button class="filter-btn" data-filter="data">Data</button>
+      <div class="projects-header">
+        <h2 class="projects-heading">
+          Selected <em>Work</em>
+        </h2>
+        <div class="proj-filter-row">
+          <button class="filter-tab active" data-filter="all">Semua</button>
+          <button class="filter-tab" data-filter="website">Website</button>
+          <button class="filter-tab" data-filter="dashboard">Dashboard</button>
+        </div>
       </div>
 
-      <div class="projects-grid" id="projectsGrid">
+      <!-- Featured: 2 big projects -->
+      <div class="proj-featured" id="projGrid">
 
-        <!-- PROJECT 1: WIKA BETON WEBSITE -->
-        <div class="project-card" data-category="website" data-aos="fade-up">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-              <i class="fas fa-globe"></i>
+        <article class="proj-card proj-featured-card" data-category="website" data-reveal>
+          <div class="proj-card-top">
+            <div class="proj-meta">
+              <span class="proj-num mono">01</span>
+              <div class="proj-links-row">
+                <a href="https://material-strategis-wika-pasuruan.vercel.app/" target="_blank" rel="noopener" class="proj-link-btn">
+                  Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://material-strategis-wika-pasuruan.vercel.app/" target="_blank" rel="noopener" title="Live Demo">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+            <div class="proj-accent" style="background: linear-gradient(135deg,#d4e4f7 0%,#eaf3fb 100%);"></div>
+          </div>
+          <div class="proj-card-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Website</span>
+              <span class="proj-tag mono">Next.js</span>
+              <span class="proj-tag mono">Vercel</span>
             </div>
+            <h3 class="proj-title">Material Strategis<br />WIKA Pasuruan</h3>
+            <p class="proj-desc">
+              Sistem informasi material strategis PT. WIKA BETON Pasuruan. Website full-stack 
+              yang memvisualisasikan data material operasional secara real-time untuk tim lapangan dan manajemen.
+            </p>
           </div>
-          <div class="project-body">
-            <span class="project-cat">Website · Live Project</span>
-            <h3>Material Strategis WIKA Pasuruan</h3>
-            <p>Website sistem informasi material strategis PT. WIKA BETON Pasuruan yang dibangun menggunakan teknologi web modern dan di-deploy di Vercel.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Next.js</span>
-              <span>Vercel</span>
-              <span>React</span>
-            </div>
-            <a href="https://material-strategis-wika-pasuruan.vercel.app/" target="_blank" class="project-cta">
-              Lihat Live <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        </article>
 
-        <!-- PROJECT 2: JAKARTA DASHBOARD WEBSITE -->
-        <div class="project-card" data-category="website" data-aos="fade-up" data-aos-delay="50">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
-              <i class="fas fa-tachometer-alt"></i>
+        <article class="proj-card proj-featured-card" data-category="website" data-reveal>
+          <div class="proj-card-top">
+            <div class="proj-meta">
+              <span class="proj-num mono">02</span>
+              <div class="proj-links-row">
+                <a href="https://dashboardjakarta.vercel.app/" target="_blank" rel="noopener" class="proj-link-btn">
+                  Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="https://dashboardjakarta.vercel.app/" target="_blank" rel="noopener" title="Live Demo">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
+            <div class="proj-accent" style="background: linear-gradient(135deg,#fde8d8 0%,#fdf3ec 100%);"></div>
+          </div>
+          <div class="proj-card-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Website</span>
+              <span class="proj-tag mono">Dashboard</span>
+              <span class="proj-tag mono">Vercel</span>
             </div>
+            <h3 class="proj-title">Stockyard Management<br />System Jakarta</h3>
+            <p class="proj-desc">
+              Dashboard web Stockyard Management PT. WIKA BETON Jakarta. Menyajikan data inventaris 
+              secara terstruktur dan interaktif untuk pengambilan keputusan operasional harian.
+            </p>
           </div>
-          <div class="project-body">
-            <span class="project-cat">Website · Live Project</span>
-            <h3>Stockyard Management System Jakarta</h3>
-            <p>Dashboard web Stockyard Management System PT. WIKA BETON Jakarta yang menyajikan data inventaris secara real-time dan interaktif.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Next.js</span>
-              <span>Vercel</span>
-              <span>Dashboard</span>
-            </div>
-            <a href="https://dashboardjakarta.vercel.app/" target="_blank" class="project-cta">
-              Lihat Live <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        </article>
 
-        <!-- PROJECT 3: PASURUAN DASHBOARD -->
-        <div class="project-card" data-category="dashboard" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-              <i class="fas fa-chart-bar"></i>
-            </div>
-            <div class="project-links">
-              <a href="https://script.google.com/macros/s/AKfycbxxsG6GFR8G6_ut7bLbdEZ7oNNc_oYDUxiJz89iQI5pq9YzLVHupFYB1c--Gypwvw/exec" target="_blank" rel="noopener" title="Dashboard">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/18CQf98j5hgAwQp8HGG5L3nMWYG_0wOXq8Fn36ZBu8f8/edit?gid=0#gid=0" target="_blank" rel="noopener" title="Spreadsheet">
-                <i class="fas fa-table"></i>
-              </a>
-            </div>
-          </div>
-          <div class="project-body">
-            <span class="project-cat">Dashboard · Apps Script</span>
-            <h3>Stockyard Dashboard – Pasuruan</h3>
-            <p>Dashboard interaktif berbasis Google Apps Script untuk manajemen opname stockyard PT. WIKA BETON Pasuruan dengan visualisasi data real-time.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Apps Script</span>
-              <span>Spreadsheet</span>
-              <span>Dashboard</span>
-            </div>
-            <a href="https://script.google.com/macros/s/AKfycbxxsG6GFR8G6_ut7bLbdEZ7oNNc_oYDUxiJz89iQI5pq9YzLVHupFYB1c--Gypwvw/exec" target="_blank" class="project-cta">
-              Buka Dashboard <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+      </div>
 
-        <!-- PROJECT 4: BOGOR -->
-        <div class="project-card" data-category="dashboard" data-aos="fade-up" data-aos-delay="150">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
-              <i class="fas fa-chart-pie"></i>
-            </div>
-            <div class="project-links">
-              <a href="https://script.google.com/macros/s/AKfycbzIFD1qGW2R5YIrXjJm-GbEtEEQ5AmhIlcZqkU8_gvid1B2uy0BfNPOhTXfNMA6ckFZ/exec" target="_blank" rel="noopener" title="Dashboard">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1kN5NiGyW2Y8qz3MBppgdbZNzK6Nf6V412shuIuvP7aw/edit?gid=0#gid=0" target="_blank" rel="noopener" title="Spreadsheet">
-                <i class="fas fa-table"></i>
-              </a>
-            </div>
-          </div>
-          <div class="project-body">
-            <span class="project-cat">Dashboard · Apps Script</span>
-            <h3>Stockyard Dashboard – Bogor</h3>
-            <p>Sistem dashboard stockyard untuk plant PT. WIKA BETON Bogor, terintegrasi dengan spreadsheet opname untuk akurasi data inventaris.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Apps Script</span>
-              <span>Spreadsheet</span>
-              <span>BI</span>
-            </div>
-            <a href="https://script.google.com/macros/s/AKfycbzIFD1qGW2R5YIrXjJm-GbEtEEQ5AmhIlcZqkU8_gvid1B2uy0BfNPOhTXfNMA6ckFZ/exec" target="_blank" class="project-cta">
-              Buka Dashboard <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+      <!-- Grid: Apps Script dashboards -->
+      <div class="proj-grid" id="projGridSmall">
 
-        <!-- PROJECT 5: MAJALENGKA -->
-        <div class="project-card" data-category="dashboard" data-aos="fade-up">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #fa709a, #fee140);">
-              <i class="fas fa-database"></i>
+        <article class="proj-card proj-sm-card" data-category="dashboard" data-reveal>
+          <div class="proj-sm-top" style="background:linear-gradient(135deg,#dff7f0,#f0fdf9);">
+            <span class="proj-num mono" style="color:#0d9488;">03</span>
+          </div>
+          <div class="proj-sm-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Dashboard</span>
+              <span class="proj-tag mono">Apps Script</span>
             </div>
-            <div class="project-links">
-              <a href="https://script.google.com/macros/s/AKfycbxu89p8G1Wbd_n0TjDb3uFt5m8thqVucXzYsDUIvkjZDBw1EcE-6SkRhUhCafRec1HVJA/exec" target="_blank" rel="noopener" title="Dashboard">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1BVTT2UsCP2xKzBOXO1argzuP1izOU_bwCMcztf7S_kY/edit?usp=sharing" target="_blank" rel="noopener" title="Spreadsheet">
-                <i class="fas fa-table"></i>
-              </a>
+            <h3 class="proj-sm-title">Stockyard – Pasuruan</h3>
+            <p class="proj-sm-desc">Dashboard & spreadsheet opname stockyard Pasuruan berbasis Google Apps Script.</p>
+            <div class="proj-sm-links">
+              <a href="https://script.google.com/macros/s/AKfycbxxsG6GFR8G6_ut7bLbdEZ7oNNc_oYDUxiJz89iQI5pq9YzLVHupFYB1c--Gypwvw/exec" target="_blank" rel="noopener">Dashboard ↗</a>
+              <a href="https://docs.google.com/spreadsheets/d/18CQf98j5hgAwQp8HGG5L3nMWYG_0wOXq8Fn36ZBu8f8/edit?gid=0#gid=0" target="_blank" rel="noopener">Spreadsheet ↗</a>
             </div>
           </div>
-          <div class="project-body">
-            <span class="project-cat">Dashboard · Apps Script</span>
-            <h3>Stockyard Dashboard – Majalengka</h3>
-            <p>Dashboard manajemen stockyard untuk plant Majalengka dengan sistem opname terdigitalisasi berbasis Google Workspace.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Apps Script</span>
-              <span>Google Sheets</span>
-            </div>
-            <a href="https://script.google.com/macros/s/AKfycbxu89p8G1Wbd_n0TjDb3uFt5m8thqVucXzYsDUIvkjZDBw1EcE-6SkRhUhCafRec1HVJA/exec" target="_blank" class="project-cta">
-              Buka Dashboard <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        </article>
 
-        <!-- PROJECT 6: LAMPUNG -->
-        <div class="project-card" data-category="dashboard" data-aos="fade-up" data-aos-delay="50">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
-              <i class="fas fa-map-marked-alt"></i>
+        <article class="proj-card proj-sm-card" data-category="dashboard" data-reveal>
+          <div class="proj-sm-top" style="background:linear-gradient(135deg,#f0e6ff,#faf5ff);">
+            <span class="proj-num mono" style="color:#7c3aed;">04</span>
+          </div>
+          <div class="proj-sm-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Dashboard</span>
+              <span class="proj-tag mono">Apps Script</span>
             </div>
-            <div class="project-links">
-              <a href="https://script.google.com/macros/s/AKfycbzlVvP3NiJtSWj_wQWcaiZa8LBXf2jejKDFvwJUNH2qooZ4Whe2Js7rtDvmtfYzOp8-/exec" target="_blank" rel="noopener" title="Dashboard">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1_YB-pDPhL7FsRjxSicNYWyMRr9gGxwrMqbx3Aa2ZXJY/edit?usp=sharing" target="_blank" rel="noopener" title="Spreadsheet">
-                <i class="fas fa-table"></i>
-              </a>
+            <h3 class="proj-sm-title">Stockyard – Bogor</h3>
+            <p class="proj-sm-desc">Sistem dashboard stockyard Bogor terintegrasi dengan spreadsheet opname digital.</p>
+            <div class="proj-sm-links">
+              <a href="https://script.google.com/macros/s/AKfycbzIFD1qGW2R5YIrXjJm-GbEtEEQ5AmhIlcZqkU8_gvid1B2uy0BfNPOhTXfNMA6ckFZ/exec" target="_blank" rel="noopener">Dashboard ↗</a>
+              <a href="https://docs.google.com/spreadsheets/d/1kN5NiGyW2Y8qz3MBppgdbZNzK6Nf6V412shuIuvP7aw/edit?gid=0#gid=0" target="_blank" rel="noopener">Spreadsheet ↗</a>
             </div>
           </div>
-          <div class="project-body">
-            <span class="project-cat">Dashboard · Apps Script</span>
-            <h3>Stockyard Dashboard – Lampung</h3>
-            <p>Dashboard stockyard untuk plant LAMSEL Lampung, mengintegrasikan data opname lapangan ke dalam sistem visualisasi berbasis web.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Apps Script</span>
-              <span>Google Sheets</span>
-            </div>
-            <a href="https://script.google.com/macros/s/AKfycbzlVvP3NiJtSWj_wQWcaiZa8LBXf2jejKDFvwJUNH2qooZ4Whe2Js7rtDvmtfYzOp8-/exec" target="_blank" class="project-cta">
-              Buka Dashboard <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        </article>
 
-        <!-- PROJECT 7: SUBANG KARAWANG -->
-        <div class="project-card" data-category="dashboard" data-aos="fade-up" data-aos-delay="100">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #30cfd0, #667eea);">
-              <i class="fas fa-industry"></i>
+        <article class="proj-card proj-sm-card" data-category="dashboard" data-reveal>
+          <div class="proj-sm-top" style="background:linear-gradient(135deg,#fef9c3,#fffde7);">
+            <span class="proj-num mono" style="color:#b45309;">05</span>
+          </div>
+          <div class="proj-sm-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Dashboard</span>
+              <span class="proj-tag mono">Apps Script</span>
             </div>
-            <div class="project-links">
-              <a href="https://script.google.com/macros/s/AKfycbxC8x2IA4NE0NM1iwFoHy6BOIYVrsEaoII2d6SCGF4/dev" target="_blank" rel="noopener" title="Dashboard">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1ErvhoDfZzKFoWOSW8Gux-p0LDN6iC77w_A_Sl2o0bdM/edit?usp=sharing" target="_blank" rel="noopener" title="Spreadsheet">
-                <i class="fas fa-table"></i>
-              </a>
+            <h3 class="proj-sm-title">Stockyard – Majalengka</h3>
+            <p class="proj-sm-desc">Opname & dashboard manajemen stockyard Majalengka berbasis Google Workspace.</p>
+            <div class="proj-sm-links">
+              <a href="https://script.google.com/macros/s/AKfycbxu89p8G1Wbd_n0TjDb3uFt5m8thqVucXzYsDUIvkjZDBw1EcE-6SkRhUhCafRec1HVJA/exec" target="_blank" rel="noopener">Dashboard ↗</a>
+              <a href="https://docs.google.com/spreadsheets/d/1BVTT2UsCP2xKzBOXO1argzuP1izOU_bwCMcztf7S_kY/edit?usp=sharing" target="_blank" rel="noopener">Spreadsheet ↗</a>
             </div>
           </div>
-          <div class="project-body">
-            <span class="project-cat">Dashboard · Apps Script</span>
-            <h3>Stockyard Dashboard – Subang Karawang</h3>
-            <p>Dashboard pengelolaan stockyard area Subang-Karawang dengan integrasi spreadsheet opname digital.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Apps Script</span>
-              <span>Google Sheets</span>
-            </div>
-            <a href="https://script.google.com/macros/s/AKfycbxC8x2IA4NE0NM1iwFoHy6BOIYVrsEaoII2d6SCGF4/dev" target="_blank" class="project-cta">
-              Buka Dashboard <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        </article>
 
-        <!-- PROJECT 8: SUMUT -->
-        <div class="project-card" data-category="dashboard" data-aos="fade-up" data-aos-delay="150">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
-              <i class="fas fa-layer-group"></i>
+        <article class="proj-card proj-sm-card" data-category="dashboard" data-reveal>
+          <div class="proj-sm-top" style="background:linear-gradient(135deg,#ffe4e6,#fff1f2);">
+            <span class="proj-num mono" style="color:#be123c;">06</span>
+          </div>
+          <div class="proj-sm-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Dashboard</span>
+              <span class="proj-tag mono">Apps Script</span>
             </div>
-            <div class="project-links">
-              <a href="https://script.google.com/macros/s/AKfycbyQD8NS3vIfTdIGVd4ohuowgdh-be3azflhmB4-J6OU3LwCZIjbBro_sYkm44wXnE7x/exec" target="_blank" rel="noopener" title="Dashboard">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/10RdbwPV0nEHlaA4Lr3MQuTUuzcTBRveUj9iyDeF0Ko0/edit?usp=sharing" target="_blank" rel="noopener" title="Spreadsheet">
-                <i class="fas fa-table"></i>
-              </a>
+            <h3 class="proj-sm-title">Stockyard – Lampung</h3>
+            <p class="proj-sm-desc">Dashboard LAMSEL Lampung mengintegrasikan data lapangan ke sistem visualisasi berbasis web.</p>
+            <div class="proj-sm-links">
+              <a href="https://script.google.com/macros/s/AKfycbzlVvP3NiJtSWj_wQWcaiZa8LBXf2jejKDFvwJUNH2qooZ4Whe2Js7rtDvmtfYzOp8-/exec" target="_blank" rel="noopener">Dashboard ↗</a>
+              <a href="https://docs.google.com/spreadsheets/d/1_YB-pDPhL7FsRjxSicNYWyMRr9gGxwrMqbx3Aa2ZXJY/edit?usp=sharing" target="_blank" rel="noopener">Spreadsheet ↗</a>
             </div>
           </div>
-          <div class="project-body">
-            <span class="project-cat">Dashboard · Apps Script</span>
-            <h3>Stockyard Dashboard – Sumatera Utara</h3>
-            <p>Dashboard manajemen stockyard untuk plant Sumatera Utara, bagian dari sistem terintegrasi multi-lokasi PT. WIKA BETON.</p>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Apps Script</span>
-              <span>Google Sheets</span>
-            </div>
-            <a href="https://script.google.com/macros/s/AKfycbyQD8NS3vIfTdIGVd4ohuowgdh-be3azflhmB4-J6OU3LwCZIjbBro_sYkm44wXnE7x/exec" target="_blank" class="project-cta">
-              Buka Dashboard <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        </article>
 
-        <!-- PROJECT 9: SULSEL -->
-        <div class="project-card" data-category="dashboard" data-aos="fade-up">
-          <div class="project-card-header">
-            <div class="project-icon-wrap" style="background: linear-gradient(135deg, #fd746c, #ff9068);">
-              <i class="fas fa-server"></i>
+        <article class="proj-card proj-sm-card" data-category="dashboard" data-reveal>
+          <div class="proj-sm-top" style="background:linear-gradient(135deg,#d1fae5,#ecfdf5);">
+            <span class="proj-num mono" style="color:#065f46;">07</span>
+          </div>
+          <div class="proj-sm-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Dashboard</span>
+              <span class="proj-tag mono">Apps Script</span>
             </div>
-            <div class="project-links">
-              <a href="https://script.google.com/macros/s/AKfycbwmTwehOfSI1Ez2NSxTqoVjFQT39QQWEtBo2BsyrfA/dev" target="_blank" rel="noopener" title="Dashboard">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://docs.google.com/spreadsheets/d/1Lo9l88r0XEFQSZA6-7vRP0PSvApgNJhMj69VXrsL0jo/edit?usp=sharing" target="_blank" rel="noopener" title="Spreadsheet">
-                <i class="fas fa-table"></i>
-              </a>
+            <h3 class="proj-sm-title">Stockyard – Subang Karawang</h3>
+            <p class="proj-sm-desc">Sistem pengelolaan stockyard area Subang-Karawang dengan spreadsheet opname digital terintegrasi.</p>
+            <div class="proj-sm-links">
+              <a href="https://script.google.com/macros/s/AKfycbxC8x2IA4NE0NM1iwFoHy6BOIYVrsEaoII2d6SCGF4/dev" target="_blank" rel="noopener">Dashboard ↗</a>
+              <a href="https://docs.google.com/spreadsheets/d/1ErvhoDfZzKFoWOSW8Gux-p0LDN6iC77w_A_Sl2o0bdM/edit?usp=sharing" target="_blank" rel="noopener">Spreadsheet ↗</a>
             </div>
           </div>
-          <div class="project-body">
-            <span class="project-cat">Dashboard · Apps Script</span>
-            <h3>Stockyard Dashboard – Sulawesi Selatan</h3>
-            <p>Dashboard pengelolaan data stockyard plant Sulawesi Selatan, melengkapi ekosistem data terintegrasi nasional PT. WIKA BETON.</p>
+        </article>
+
+        <article class="proj-card proj-sm-card" data-category="dashboard" data-reveal>
+          <div class="proj-sm-top" style="background:linear-gradient(135deg,#e0f2fe,#f0f9ff);">
+            <span class="proj-num mono" style="color:#0369a1;">08</span>
           </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              <span>Apps Script</span>
-              <span>Google Sheets</span>
+          <div class="proj-sm-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Dashboard</span>
+              <span class="proj-tag mono">Apps Script</span>
             </div>
-            <a href="https://script.google.com/macros/s/AKfycbwmTwehOfSI1Ez2NSxTqoVjFQT39QQWEtBo2BsyrfA/dev" target="_blank" class="project-cta">
-              Buka Dashboard <i class="fas fa-arrow-right"></i>
-            </a>
+            <h3 class="proj-sm-title">Stockyard – Sumatera Utara</h3>
+            <p class="proj-sm-desc">Dashboard multi-lokasi PT. WIKA BETON untuk plant Sumatera Utara dengan monitoring real-time.</p>
+            <div class="proj-sm-links">
+              <a href="https://script.google.com/macros/s/AKfycbyQD8NS3vIfTdIGVd4ohuowgdh-be3azflhmB4-J6OU3LwCZIjbBro_sYkm44wXnE7x/exec" target="_blank" rel="noopener">Dashboard ↗</a>
+              <a href="https://docs.google.com/spreadsheets/d/10RdbwPV0nEHlaA4Lr3MQuTUuzcTBRveUj9iyDeF0Ko0/edit?usp=sharing" target="_blank" rel="noopener">Spreadsheet ↗</a>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <article class="proj-card proj-sm-card" data-category="dashboard" data-reveal>
+          <div class="proj-sm-top" style="background:linear-gradient(135deg,#fce7f3,#fdf2f8);">
+            <span class="proj-num mono" style="color:#9d174d;">09</span>
+          </div>
+          <div class="proj-sm-body">
+            <div class="proj-tags-row">
+              <span class="proj-tag mono">Dashboard</span>
+              <span class="proj-tag mono">Apps Script</span>
+            </div>
+            <h3 class="proj-sm-title">Stockyard – Sulawesi Selatan</h3>
+            <p class="proj-sm-desc">Dashboard terakhir dalam ekosistem data nasional PT. WIKA BETON — plant Sulawesi Selatan.</p>
+            <div class="proj-sm-links">
+              <a href="https://script.google.com/macros/s/AKfycbwmTwehOfSI1Ez2NSxTqoVjFQT39QQWEtBo2BsyrfA/dev" target="_blank" rel="noopener">Dashboard ↗</a>
+              <a href="https://docs.google.com/spreadsheets/d/1Lo9l88r0XEFQSZA6-7vRP0PSvApgNJhMj69VXrsL0jo/edit?usp=sharing" target="_blank" rel="noopener">Spreadsheet ↗</a>
+            </div>
+          </div>
+        </article>
 
       </div>
     </div>
   </section>
 
-  <!-- ====== CERTIFICATES ====== -->
+  <!-- ═══════════════ CERTIFICATES ═══════════════ -->
   <section id="certificates">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Sertifikat</span>
-        <h2>Credentials & <span class="gradient-text">Certificates</span></h2>
-        <p class="section-desc">Klik pada sertifikat untuk melihat dokumen asli yang dapat diverifikasi.</p>
+      <div class="section-label">
+        <span class="mono label-num">05</span>
+        <span>Sertifikat</span>
       </div>
-      <div class="certs-grid" data-aos="fade-up">
 
-        <div class="cert-card" onclick="openCertModal('assets/certificates/sertifikat-data-analyst.pdf', 'Sertifikat Data Analyst – Completion Certificate', 'pdf')">
-          <div class="cert-icon-wrap" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-            <i class="fas fa-certificate"></i>
+      <div class="certs-header">
+        <h2 class="certs-heading">Credentials &amp; <em>Certifications</em></h2>
+        <p class="certs-sub">Klik sertifikat untuk melihat &amp; mengunduh dokumen asli yang terverifikasi.</p>
+      </div>
+
+      <div class="certs-table">
+
+        <div class="cert-row" data-reveal onclick="openModal('assets/certificates/sertifikat-data-analyst.pdf','Certificate of Completion — Data Analyst','pdf')">
+          <div class="cert-row-left">
+            <span class="cert-idx mono">01</span>
+            <div class="cert-row-info">
+              <h4>Certificate of Completion — Data Analyst</h4>
+              <p>Data Analyst Course &nbsp;·&nbsp; Program sertifikasi analisis data, visualisasi, dan business intelligence</p>
+            </div>
           </div>
-          <div class="cert-body">
-            <span class="cert-issuer"><i class="fas fa-award"></i> Data Analyst Course</span>
-            <h4>Certificate of Completion – Data Analyst</h4>
-            <p>Sertifikat penyelesaian program Data Analyst yang mencakup analisis data, visualisasi, dan business intelligence.</p>
-          </div>
-          <div class="cert-footer">
-            <span class="cert-type pdf"><i class="fas fa-file-pdf"></i> PDF</span>
-            <span class="cert-view">Lihat Dokumen <i class="fas fa-eye"></i></span>
+          <div class="cert-row-right">
+            <span class="cert-badge-type pdf">PDF</span>
+            <span class="cert-action">Lihat <i class="fas fa-eye"></i></span>
           </div>
         </div>
 
-        <div class="cert-card" onclick="openCertModal('assets/certificates/sertifikat-magang-its.pdf', 'Sertifikat Magang ITS', 'pdf')">
-          <div class="cert-icon-wrap" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-            <i class="fas fa-university"></i>
+        <div class="cert-row" data-reveal onclick="openModal('assets/certificates/sertifikat-magang-its.pdf','Sertifikat Magang — ITS Surabaya','pdf')">
+          <div class="cert-row-left">
+            <span class="cert-idx mono">02</span>
+            <div class="cert-row-info">
+              <h4>Sertifikat Magang</h4>
+              <p>Institut Teknologi Sepuluh Nopember (ITS) &nbsp;·&nbsp; Sertifikat resmi program magang</p>
+            </div>
           </div>
-          <div class="cert-body">
-            <span class="cert-issuer"><i class="fas fa-award"></i> ITS Surabaya</span>
-            <h4>Sertifikat Magang – ITS</h4>
-            <p>Sertifikat resmi keikutsertaan dalam program magang yang difasilitasi oleh Institut Teknologi Sepuluh Nopember.</p>
-          </div>
-          <div class="cert-footer">
-            <span class="cert-type pdf"><i class="fas fa-file-pdf"></i> PDF</span>
-            <span class="cert-view">Lihat Dokumen <i class="fas fa-eye"></i></span>
-          </div>
-        </div>
-
-        <div class="cert-card" onclick="openCertModal('assets/certificates/sertifikat-finalis-duta-muda-jatim.jpg', 'Finalis Duta Muda Jawa Timur 2024', 'img')">
-          <div class="cert-icon-wrap" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
-            <i class="fas fa-star"></i>
-          </div>
-          <div class="cert-body">
-            <span class="cert-issuer"><i class="fas fa-award"></i> Pemprov Jawa Timur</span>
-            <h4>Finalis Duta Muda Jawa Timur 2024</h4>
-            <p>Sertifikat sebagai Finalis Duta Muda Jawa Timur 2024 dari Pemerintah Provinsi Jawa Timur.</p>
-          </div>
-          <div class="cert-footer">
-            <span class="cert-type img"><i class="fas fa-image"></i> JPG</span>
-            <span class="cert-view">Lihat Dokumen <i class="fas fa-eye"></i></span>
+          <div class="cert-row-right">
+            <span class="cert-badge-type pdf">PDF</span>
+            <span class="cert-action">Lihat <i class="fas fa-eye"></i></span>
           </div>
         </div>
 
-        <div class="cert-card" onclick="openCertModal('assets/certificates/sertifikat-juara-3.jpeg', 'Sertifikat Juara 3', 'img')">
-          <div class="cert-icon-wrap" style="background: linear-gradient(135deg, #fa709a, #fee140);">
-            <i class="fas fa-trophy"></i>
+        <div class="cert-row" data-reveal onclick="openModal('assets/certificates/sk-galeri-investasi.pdf','SK Pengurus Galeri Investasi 2026','pdf')">
+          <div class="cert-row-left">
+            <span class="cert-idx mono">03</span>
+            <div class="cert-row-info">
+              <h4>SK Pengurus Galeri Investasi 2026</h4>
+              <p>Galeri Investasi ITS &nbsp;·&nbsp; Surat Keputusan resmi kepengurusan literasi investasi</p>
+            </div>
           </div>
-          <div class="cert-body">
-            <span class="cert-issuer"><i class="fas fa-award"></i> Kompetisi Akademik</span>
-            <h4>Juara 3 – Kompetisi Regional</h4>
-            <p>Sertifikat penghargaan sebagai Juara 3 dalam kompetisi yang menampilkan kemampuan analitik dan problem solving.</p>
-          </div>
-          <div class="cert-footer">
-            <span class="cert-type img"><i class="fas fa-image"></i> JPEG</span>
-            <span class="cert-view">Lihat Dokumen <i class="fas fa-eye"></i></span>
-          </div>
-        </div>
-
-        <div class="cert-card" onclick="openCertModal('assets/certificates/sertifikat-its-entrepreneur-club.pdf', 'Sertifikat ITS Entrepreneur Club', 'pdf')">
-          <div class="cert-icon-wrap" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <div class="cert-body">
-            <span class="cert-issuer"><i class="fas fa-award"></i> ITS Entrepreneur Club</span>
-            <h4>Sertifikat Kegiatan – ITS Entrepreneur Club</h4>
-            <p>Sertifikat partisipasi dalam kegiatan ITS Entrepreneur Club yang berfokus pada pengembangan jiwa wirausaha mahasiswa.</p>
-          </div>
-          <div class="cert-footer">
-            <span class="cert-type pdf"><i class="fas fa-file-pdf"></i> PDF</span>
-            <span class="cert-view">Lihat Dokumen <i class="fas fa-eye"></i></span>
+          <div class="cert-row-right">
+            <span class="cert-badge-type pdf">PDF</span>
+            <span class="cert-action">Lihat <i class="fas fa-eye"></i></span>
           </div>
         </div>
 
-        <div class="cert-card" onclick="openCertModal('assets/certificates/sertifikat-upgrade-umkm-iyt.pdf', 'Sertifikat Upgrade UMKM – IYT', 'pdf')">
-          <div class="cert-icon-wrap" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
-            <i class="fas fa-store"></i>
+        <div class="cert-row" data-reveal onclick="openModal('assets/certificates/sertifikat-finalis-duta-muda-jatim.jpg','Finalis Duta Muda Jawa Timur 2024','img')">
+          <div class="cert-row-left">
+            <span class="cert-idx mono">04</span>
+            <div class="cert-row-info">
+              <h4>Finalis Duta Muda Jawa Timur 2024</h4>
+              <p>Pemerintah Provinsi Jawa Timur &nbsp;·&nbsp; Sertifikat finalis tingkat provinsi</p>
+            </div>
           </div>
-          <div class="cert-body">
-            <span class="cert-issuer"><i class="fas fa-award"></i> IYT Program</span>
-            <h4>Sertifikat Upgrade UMKM – IYT</h4>
-            <p>Sertifikat keikutsertaan dalam program Upgrade UMKM bersama Indonesian Youth Today, fokus pada digitalisasi bisnis.</p>
-          </div>
-          <div class="cert-footer">
-            <span class="cert-type pdf"><i class="fas fa-file-pdf"></i> PDF</span>
-            <span class="cert-view">Lihat Dokumen <i class="fas fa-eye"></i></span>
-          </div>
-        </div>
-
-        <div class="cert-card" onclick="openCertModal('assets/certificates/sertifikat-ini-lho-its-pasuruan.jpg', 'Sertifikat Ini Lho ITS – Forum Daerah Pasuruan', 'img')">
-          <div class="cert-icon-wrap" style="background: linear-gradient(135deg, #30cfd0, #667eea);">
-            <i class="fas fa-users"></i>
-          </div>
-          <div class="cert-body">
-            <span class="cert-issuer"><i class="fas fa-award"></i> ITS Surabaya</span>
-            <h4>Ini Lho ITS – Forum Daerah Pasuruan</h4>
-            <p>Sertifikat partisipasi dalam kegiatan forum daerah Kabupaten Pasuruan yang diselenggarakan oleh ITS Surabaya.</p>
-          </div>
-          <div class="cert-footer">
-            <span class="cert-type img"><i class="fas fa-image"></i> JPG</span>
-            <span class="cert-view">Lihat Dokumen <i class="fas fa-eye"></i></span>
+          <div class="cert-row-right">
+            <span class="cert-badge-type img">JPG</span>
+            <span class="cert-action">Lihat <i class="fas fa-eye"></i></span>
           </div>
         </div>
 
-        <div class="cert-card" onclick="openCertModal('assets/certificates/sk-galeri-investasi.pdf', 'SK Pengurus Galeri Investasi 2026', 'pdf')">
-          <div class="cert-icon-wrap" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
-            <i class="fas fa-chart-line"></i>
+        <div class="cert-row" data-reveal onclick="openModal('assets/certificates/sertifikat-juara-3.jpeg','Sertifikat Juara 3 — Kompetisi Regional','img')">
+          <div class="cert-row-left">
+            <span class="cert-idx mono">05</span>
+            <div class="cert-row-info">
+              <h4>Juara 3 — Kompetisi Regional</h4>
+              <p>Kompetisi Akademik &nbsp;·&nbsp; Penghargaan atas kemampuan analitis dan problem solving</p>
+            </div>
           </div>
-          <div class="cert-body">
-            <span class="cert-issuer"><i class="fas fa-award"></i> Galeri Investasi ITS</span>
-            <h4>SK Pengurus Galeri Investasi 2026</h4>
-            <p>Surat Keputusan resmi sebagai pengurus Galeri Investasi di lingkungan ITS, mendukung literasi keuangan dan pasar modal.</p>
+          <div class="cert-row-right">
+            <span class="cert-badge-type img">JPEG</span>
+            <span class="cert-action">Lihat <i class="fas fa-eye"></i></span>
           </div>
-          <div class="cert-footer">
-            <span class="cert-type pdf"><i class="fas fa-file-pdf"></i> PDF</span>
-            <span class="cert-view">Lihat Dokumen <i class="fas fa-eye"></i></span>
+        </div>
+
+        <div class="cert-row" data-reveal onclick="openModal('assets/certificates/sertifikat-its-entrepreneur-club.pdf','Sertifikat Kegiatan ITS Entrepreneur Club','pdf')">
+          <div class="cert-row-left">
+            <span class="cert-idx mono">06</span>
+            <div class="cert-row-info">
+              <h4>Sertifikat Kegiatan — ITS Entrepreneur Club</h4>
+              <p>ITS Entrepreneur Club &nbsp;·&nbsp; Partisipasi dalam kegiatan pengembangan kewirausahaan</p>
+            </div>
+          </div>
+          <div class="cert-row-right">
+            <span class="cert-badge-type pdf">PDF</span>
+            <span class="cert-action">Lihat <i class="fas fa-eye"></i></span>
+          </div>
+        </div>
+
+        <div class="cert-row" data-reveal onclick="openModal('assets/certificates/sertifikat-upgrade-umkm-iyt.pdf','Sertifikat Upgrade UMKM — IYT','pdf')">
+          <div class="cert-row-left">
+            <span class="cert-idx mono">07</span>
+            <div class="cert-row-info">
+              <h4>Sertifikat Upgrade UMKM</h4>
+              <p>Indonesian Youth Today (IYT) &nbsp;·&nbsp; Program digitalisasi dan pengembangan UMKM</p>
+            </div>
+          </div>
+          <div class="cert-row-right">
+            <span class="cert-badge-type pdf">PDF</span>
+            <span class="cert-action">Lihat <i class="fas fa-eye"></i></span>
+          </div>
+        </div>
+
+        <div class="cert-row" data-reveal onclick="openModal('assets/certificates/sertifikat-ini-lho-its-pasuruan.jpg','Sertifikat Ini Lho ITS — Forum Daerah Pasuruan','img')">
+          <div class="cert-row-left">
+            <span class="cert-idx mono">08</span>
+            <div class="cert-row-info">
+              <h4>Ini Lho ITS — Forum Daerah Pasuruan</h4>
+              <p>ITS Surabaya &nbsp;·&nbsp; Forum daerah pengenalan ITS kepada masyarakat Kabupaten Pasuruan</p>
+            </div>
+          </div>
+          <div class="cert-row-right">
+            <span class="cert-badge-type img">JPG</span>
+            <span class="cert-action">Lihat <i class="fas fa-eye"></i></span>
           </div>
         </div>
 
@@ -834,80 +755,65 @@
     </div>
   </section>
 
-  <!-- ====== CONTACT ====== -->
+  <!-- ═══════════════ CONTACT ═══════════════ -->
   <section id="contact">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-tag">Kontak</span>
-        <h2>Let's <span class="gradient-text">Connect</span></h2>
-        <p class="section-desc">Terbuka untuk diskusi, kolaborasi, dan peluang karir baru.</p>
+      <div class="section-label">
+        <span class="mono label-num">06</span>
+        <span>Kontak</span>
       </div>
-      <div class="contact-grid" data-aos="fade-up">
-        <div class="contact-info">
-          <div class="contact-card">
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-              <div>
-                <span>Email</span>
-                <a href="mailto:rifkizakaria@email.com">rifkizakaria@email.com</a>
-              </div>
+
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <h2 class="contact-heading">
+            Punya proyek<br />atau peluang?<br /><em>Mari bicara.</em>
+          </h2>
+          <p class="contact-text">
+            Saya terbuka untuk diskusi kolaborasi, peluang magang, 
+            full-time, maupun proyek freelance. Hubungi saya melalui 
+            form atau langsung lewat email.
+          </p>
+          <div class="contact-meta">
+            <div class="contact-meta-item">
+              <span class="mono">Email</span>
+              <a href="mailto:rifkizakaria@email.com">rifkizakaria@email.com</a>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <div>
-                <span>Lokasi</span>
-                <strong>Pasuruan, Jawa Timur, Indonesia</strong>
-              </div>
+            <div class="contact-meta-item">
+              <span class="mono">Lokasi</span>
+              <span>Pasuruan, Jawa Timur</span>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon"><i class="fas fa-graduation-cap"></i></div>
-              <div>
-                <span>Institusi</span>
-                <strong>Institut Teknologi Sepuluh Nopember (ITS)</strong>
-              </div>
+            <div class="contact-meta-item">
+              <span class="mono">Status</span>
+              <span class="status-inline"><span class="status-dot-sm"></span>Open to Opportunities</span>
             </div>
           </div>
-          <div class="social-links">
-            <a href="#" class="social-btn linkedin" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="#" class="social-btn github" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="#" class="social-btn instagram" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-              <span>Instagram</span>
-            </a>
-            <a href="assets/CV_Rifki_Zakaria.pdf" download class="social-btn cv" aria-label="CV">
-              <i class="fas fa-file-alt"></i>
-              <span>Download CV</span>
-            </a>
+          <div class="contact-socials">
+            <a href="#" class="contact-social-link"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="#" class="contact-social-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="contact-social-link"><i class="fab fa-instagram"></i> Instagram</a>
           </div>
         </div>
-        <div class="contact-form-wrap">
+
+        <div class="contact-right">
           <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label>Nama</label>
-                <input type="text" placeholder="Nama Anda" required />
-              </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" placeholder="email@anda.com" required />
-              </div>
+            <div class="form-field">
+              <label>Nama Lengkap</label>
+              <input type="text" placeholder="Nama Anda" required />
             </div>
-            <div class="form-group">
+            <div class="form-field">
+              <label>Email</label>
+              <input type="email" placeholder="email@domain.com" required />
+            </div>
+            <div class="form-field">
               <label>Subjek</label>
-              <input type="text" placeholder="Perihal pesan" required />
+              <input type="text" placeholder="Topik pesan Anda" required />
             </div>
-            <div class="form-group">
+            <div class="form-field">
               <label>Pesan</label>
-              <textarea rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+              <textarea rows="5" placeholder="Ceritakan proyek atau peluang yang ingin Anda diskusikan..." required></textarea>
             </div>
-            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
-              Kirim Pesan <i class="fas fa-paper-plane"></i>
+            <button type="submit" class="btn-pill dark submit-btn" style="width:100%;justify-content:center;">
+              Kirim Pesan <i class="fas fa-paper-plane" style="font-size:0.85rem;"></i>
             </button>
           </form>
         </div>
@@ -915,62 +821,47 @@
     </div>
   </section>
 
-  <!-- ====== FOOTER ====== -->
+  <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer id="footer">
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <span class="nav-logo">RZ<span class="dot">.</span></span>
-          <p>Data Analyst & Business Intelligence Developer</p>
-          <p class="footer-sub">Institut Teknologi Sepuluh Nopember · Surabaya</p>
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p class="footer-brand">Rifki Zakaria</p>
+          <p class="footer-caption mono">Data Analyst &amp; BI Developer · ITS Surabaya</p>
         </div>
-        <div class="footer-links-col">
-          <h5>Navigasi</h5>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-          </ul>
-        </div>
-        <div class="footer-links-col">
-          <h5>Resources</h5>
-          <ul>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="assets/CV_Rifki_Zakaria.pdf" download>Download CV</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Rifki Zakaria. Crafted with <span class="heart">❤️</span> from Pasuruan.</p>
+        <nav class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#contact">Contact</a>
+          <a href="assets/CV_Rifki_Zakaria.pdf" download>Resume</a>
+        </nav>
+        <p class="footer-copy mono">© 2026 Rifki Zakaria</p>
       </div>
     </div>
   </footer>
 
-  <!-- ====== CERTIFICATE MODAL ====== -->
-  <div id="certModal" class="cert-modal-overlay" onclick="closeCertModal(event)">
-    <div class="cert-modal-box">
-      <div class="cert-modal-header">
-        <h3 id="certModalTitle">Sertifikat</h3>
-        <div class="cert-modal-actions">
-          <a id="certDownloadBtn" href="#" download class="cert-action-btn" title="Download">
-            <i class="fas fa-download"></i>
+  <!-- ═══════════════ MODAL ═══════════════ -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <div class="modal-header-actions">
+          <a id="modal-download" href="#" download class="modal-btn" title="Download">
+            <i class="fas fa-download"></i> Download
           </a>
-          <button class="cert-close-btn" onclick="closeCertModal()">
+          <button class="modal-close" id="modalCloseBtn" aria-label="Close">
             <i class="fas fa-times"></i>
           </button>
         </div>
       </div>
-      <div class="cert-modal-content" id="certModalContent">
-        <!-- Dynamic content -->
-      </div>
+      <div class="modal-body" id="modal-body"></div>
     </div>
   </div>
 
   <!-- Back to top -->
-  <button id="backToTop" aria-label="Back to top">
-    <i class="fas fa-chevron-up"></i>
+  <button id="btt" aria-label="Back to top" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
   </button>
 
   <script src="main.js"></script>
